@@ -1,0 +1,38 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  color: $color-secondary;
+  line-height: 1;
+  letter-spacing: .6rem;
+  text-transform: uppercase
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 2.8rem;
+  color: $color-secondary;
+  line-height: 1;
+  letter-spacing: .6rem;
+  text-transform: uppercase
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+
+  &--light { color: $color-grey-light-1; }
+  &--dark { color: $color-grey-dark-1; }
+}
+
+.heading-5 {
+  @extend %heading;
+  font-size: 2rem;
+
+  &--light { color: $color-grey-light-1; }
+  &--dark { color: $color-grey-dark-1; }
+}

@@ -1,0 +1,118 @@
+.title {
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  position: absolute;
+  text-align: center;
+  
+}
+
+.menus {
+  background-color: $color-primary;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 6rem;
+  align-items: start;
+ 
+  padding: 8rem;
+  margin: 1rem 0;
+
+  @media screen and (max-width: $bp-small) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    //grid-template-rows: repeat(6, 1fr);
+
+  }
+
+}
+
+.menu {
+  display: grid;
+
+  &__name {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+  }
+
+  &__items {
+    font-family: 'Chivo', sans-serif;
+    text-transform: capitalize;
+    font-size: 2rem;
+    display: grid;
+
+  }
+
+  &__list {
+    display: grid;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  &__info {
+    font-size: 1.5rem;
+  }
+
+  &__list__item {
+    list-style: none;
+  }
+
+  &__list__price {
+    float: right;
+  }
+
+}
+
+.pizza {
+  display: grid;
+
+  &__items {
+    font-family: 'Chivo', sans-serif;
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  &__size__M {
+    grid-column-start: 2;
+  }
+  
+  &__size__L {
+    grid-column-start: 3;
+  }
+
+  &__size__XL {
+    grid-column-start: 4;
+  }
+
+  &__list {
+    display: grid;
+    grid-row-start: 2;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  &__info {
+    font-size: 1.5rem;
+  }
+
+  &__list__item {
+    list-style: none;
+  }
+
+  &__price__M {
+    grid-row-start: 2;
+  }
+}
