@@ -30,10 +30,14 @@
 
 .menu {
   display: grid;
+  //grid-auto-rows: auto;
+  grid-template-rows: repeat(2, auto);
 
   &__name {
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
   }
 
   &__items {
@@ -41,6 +45,7 @@
     text-transform: capitalize;
     font-size: 2rem;
     display: grid;
+    grid-row-start: 2;
 
   }
 
@@ -50,7 +55,6 @@
 
   &__title {
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 3rem;
   }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -65,7 +66,7 @@ body {
 
 .heading-1 {
   font-size: 4.5rem;
-  color: #ffb366;
+  color: #fcc898;
   line-height: 1;
   letter-spacing: 0.6rem;
   text-transform: uppercase;
@@ -73,7 +74,7 @@ body {
 
 .heading-2 {
   font-size: 2.8rem;
-  color: #ffb366;
+  color: #fcc898;
   line-height: 1;
   letter-spacing: 0.6rem;
   text-transform: uppercase;
@@ -81,6 +82,7 @@ body {
 
 .heading-4 {
   font-size: 1.9rem;
+  line-height: 1.6;
 }
 .heading-4--light {
   color: #f9f7f6;
@@ -97,6 +99,46 @@ body {
 }
 .heading-5--dark {
   color: #54483A;
+}
+
+#scrollToTopBtn {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#scrollToTopBtn::after {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#scrollToTopBtn:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#scrollToTopBtn:active {
+  background-color: #555;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*
@@ -125,7 +167,7 @@ header should be frontpg so move everything inside it
 .heading-primary--middle {
   display: block;
   text-align: left;
-  color: #ffb366;
+  color: #fcc898;
 }
 .heading-primary--sub {
   display: block;
@@ -148,7 +190,7 @@ header should be frontpg so move everything inside it
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: #fff;
+  background: #4a4646;
   transition: all 0.5s ease-out;
 }
 .nav-btn.close {
@@ -186,7 +228,7 @@ header should be frontpg so move everything inside it
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: #ffae5c;
+  background: #fcc38e;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -211,7 +253,7 @@ header should be frontpg so move everything inside it
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 300;
-  color: #fff;
+  color: #5D5858;
   text-decoration: none;
   transition: all 0.5s ease-out;
 }
@@ -293,7 +335,7 @@ header should be frontpg so move everything inside it
   font-size: 2.2rem;
   grid-column-start: 2;
   align-content: flex-end;
-  color: #e5c2c2;
+  color: #FCC2C3;
 }
 
 .title {
@@ -324,23 +366,26 @@ header should be frontpg so move everything inside it
 
 .menu {
   display: grid;
+  grid-template-rows: repeat(2, auto);
 }
 .menu__name {
   font-family: "Rubik", sans-serif;
   font-weight: bold;
+  justify-content: center;
+  align-items: center;
 }
 .menu__items {
   font-family: "Chivo", sans-serif;
   text-transform: capitalize;
   font-size: 2rem;
   display: grid;
+  grid-row-start: 2;
 }
 .menu__list {
   display: grid;
 }
 .menu__title {
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 3rem;
 }
 .menu__info {
@@ -414,7 +459,7 @@ header should be frontpg so move everything inside it
   font-weight: bold;
   font-size: 4.1rem;
   text-transform: uppercase;
-  color: #ffb366;
+  color: #fcc898;
 }
 .contact__name:hover {
   font-size: 4.2rem;
@@ -545,7 +590,7 @@ ion-icon {
 }
 
 .pizza-icon:nth-child(2) {
-  color: #ffb366;
+  color: #fcc898;
   animation-delay: 0.75s;
 }
 
