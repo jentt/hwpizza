@@ -1,29 +1,16 @@
-.title {
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  position: absolute;
-  text-align: center;
-  
-}
-
 .menus {
   background-color: $color-primary;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, min-content);
   grid-gap: 6rem;
-  align-items: start;
  
   padding: 8rem;
   margin: 1rem 0;
 
-  @media screen and (max-width: $bp-small) {
+  @media screen and (max-width: $bp-medium) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    //grid-template-rows: repeat(6, 1fr);
-
   }
 
 }
@@ -31,22 +18,18 @@
 .menu {
   display: grid;
   //grid-auto-rows: auto;
-  grid-template-rows: repeat(2, auto);
+  //grid-template-rows: repeat(2, auto);
 
   &__name {
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
-    justify-content: center;
-    align-items: center;
   }
 
   &__items {
     font-family: 'Chivo', sans-serif;
     text-transform: capitalize;
     font-size: 2rem;
-    display: grid;
-    grid-row-start: 2;
-
+   
   }
 
   &__list {

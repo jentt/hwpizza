@@ -83,6 +83,7 @@ body {
 .heading-4 {
   font-size: 1.9rem;
   line-height: 1.6;
+  text-transform: uppercase;
 }
 .heading-4--light {
   color: #f9f7f6;
@@ -93,6 +94,7 @@ body {
 
 .heading-5 {
   font-size: 2rem;
+  text-transform: uppercase;
 }
 .heading-5--light {
   color: #f9f7f6;
@@ -103,11 +105,11 @@ body {
 
 #scrollToTopBtn {
   display: inline-block;
-  background-color: #FF9800;
+  background-color: #fcc898;
   width: 50px;
   height: 50px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 50%;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -129,7 +131,7 @@ body {
 
 #scrollToTopBtn:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: #FFD8D8;
 }
 
 #scrollToTopBtn:active {
@@ -144,20 +146,10 @@ body {
 /*
 header should be frontpg so move everything inside it
 */
-.header {
-  background-color: #FEF2E7;
-  overflow: hidden;
-}
-.header__text-box {
-  position: absolute;
-  left: 10rem;
-  top: 30%;
-}
-
 .heading-primary {
   font-family: "Righteous", cursive;
   font-size: 10.2rem;
-  color: #5D5858;
+  color: #000;
   z-index: 0;
 }
 .heading-primary--main {
@@ -174,8 +166,11 @@ header should be frontpg so move everything inside it
   text-align: left;
 }
 
-.bg-custom {
-  background-color: #FEF2E7 !important;
+.heading {
+  grid-column: 1/-1;
+  position: absolute;
+  left: 10rem;
+  top: 30%;
 }
 
 .nav-btn {
@@ -338,26 +333,16 @@ header should be frontpg so move everything inside it
   color: #FCC2C3;
 }
 
-.title {
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  text-align: center;
-}
-
 .menus {
   background-color: #FEF2E7;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, min-content);
   grid-gap: 6rem;
-  align-items: start;
   padding: 8rem;
   margin: 1rem 0;
 }
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 51.25em) {
   .menus {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -366,20 +351,15 @@ header should be frontpg so move everything inside it
 
 .menu {
   display: grid;
-  grid-template-rows: repeat(2, auto);
 }
 .menu__name {
   font-family: "Rubik", sans-serif;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
 }
 .menu__items {
   font-family: "Chivo", sans-serif;
   text-transform: capitalize;
   font-size: 2rem;
-  display: grid;
-  grid-row-start: 2;
 }
 .menu__list {
   display: grid;
@@ -437,100 +417,73 @@ header should be frontpg so move everything inside it
   grid-row-start: 2;
 }
 
-.contact {
+.main {
   font-family: "Staatliches", cursive;
   font-size: 2.2rem;
   opacity: 0.7;
   letter-spacing: 0.2rem;
+  background-color: #FEF2E7;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
-.contact a {
+.main a {
   color: #000;
   text-decoration: none;
   background-color: none;
   transition: all 0.1s;
 }
-.contact a:hover {
+.main a:hover {
   font-size: 2.4rem;
   font-size-adjust: 1.9rem;
   color: #4a4646;
 }
-.contact__name {
+.main__header {
+  display: grid;
+  grid-column: 1/-1;
+  position: absolute;
+  left: 10rem;
+  top: 30%;
+}
+.main__contact {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-row: -1;
+  grid-column: 1/-1;
+  min-height: 50px;
+  padding: 3.4rem;
+}
+.main__name {
   text-align: left;
   font-weight: bold;
   font-size: 4.1rem;
   text-transform: uppercase;
   color: #fcc898;
 }
-.contact__name:hover {
+.main__name:hover {
   font-size: 4.2rem;
   opacity: 0.5;
 }
-.contact__square-1 {
-  border: 0.2rem solid #aaa;
-  border-radius: 2rem;
-  z-index: 0;
-  height: 15rem;
-  width: 33rem;
-  position: absolute;
-  top: 30%;
-  right: 10rem;
-  text-align: center;
+.main__description {
+  grid-column: 1;
 }
 @media screen and (max-width: 37.5em) {
-  .contact__square-1 {
+  .main__description {
     display: none;
   }
 }
-.contact__square-2 {
-  border: 0.2rem solid #aaa;
-  border-radius: 2rem;
-  z-index: 0;
-  height: 15rem;
-  width: 33rem;
-  position: absolute;
-  top: 50%;
-  right: 10rem;
-  text-align: center;
+.main__phone {
+  grid-column-start: -1;
 }
 @media screen and (max-width: 37.5em) {
-  .contact__square-2 {
+  .main__phone {
     display: none;
   }
 }
-.contact__description {
-  height: 10rem;
-  width: 40rem;
-  position: absolute;
-  top: 34%;
-  right: 7rem;
-  text-align: center;
-  z-index: 10;
-}
-@media screen and (max-width: 37.5em) {
-  .contact__description {
-    display: none;
-  }
-}
-.contact__phone {
-  height: 10rem;
-  width: 40rem;
-  position: absolute;
-  top: 55%;
-  right: 7rem;
-  text-align: center;
-  z-index: 10;
-}
-@media screen and (max-width: 37.5em) {
-  .contact__phone {
-    display: none;
-  }
-}
-@media screen and (max-width: 37.5em) {
-  .contact__phone {
-    display: none;
-  }
-}
-.contact__mobile {
+.main__mobile {
   display: grid;
   grid-template-columns: repeat(2, 230px);
   grid-column-gap: 4rem;
@@ -538,22 +491,22 @@ header should be frontpg so move everything inside it
   background-color: #FEF2E7;
 }
 @media screen and (min-width: 37.5em) {
-  .contact__mobile {
+  .main__mobile {
     display: none;
   }
 }
-@media screen and (max-width: 37.5em) {
-  .contact__mobile {
+@media screen and (max-width: 51.25em) {
+  .main__mobile {
     visibility: visible;
     padding: 0 1rem 1rem 1rem;
     font-family: "Open Sans Condensed", sans-serif;
   }
 }
-.contact__mobile--description {
+.main__mobile--description {
   justify-self: center;
   grid-column: 1/2;
 }
-.contact__mobile--phone {
+.main__mobile--phone {
   justify-self: center;
   grid-column: 2/-1;
 }

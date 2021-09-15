@@ -1,4 +1,4 @@
-.contact {
+.main {
   // background-color: $color-primary;
   // padding: 0 1rem 1rem 1rem;
   // display: flex;
@@ -7,6 +7,14 @@
   font-size: 2.2rem;
   opacity: .7;
   letter-spacing: .2rem;
+  background-color: $color-primary;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto 1fr auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   
   a {
     color: $color-black;
@@ -19,6 +27,29 @@
     font-size: 2.4rem;
     font-size-adjust: 1.9rem;
     color: $color-grey-dark;
+  }
+
+  &__header {
+    display: grid;
+    grid-column: 1 / -1;
+
+    position: absolute;
+    left: 10rem;
+    top: 30%;
+    //grid-template-columns: repeat(2, auto);
+    //grid-template-rows: repeat(2, auto);
+
+  }
+
+  &__contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-row: -1;
+    grid-column: 1 / -1;
+    min-height: 50px;
+    padding: 3.4rem;
+    //grid-template-rows: auto 1fr auto;
+
   }
 
   &__name {
@@ -35,59 +66,65 @@
 
   }
 
-  &__square-1 {
-    //width: 32rem;
-    //height: 2rem;
-    //background-color: transparent;
-    //outline: solid $color-grey-light-2;
-    border: .2rem solid $color-grey-light-2;
-    border-radius: 2rem;
-    z-index: 0;
+  // &__square-1 {
+  //   //width: 32rem;
+  //   //height: 2rem;
+  //   //background-color: transparent;
+  //   //outline: solid $color-grey-light-2;
+  //   border: .2rem solid $color-grey-light-2;
+  //   border-radius: 2rem;
+  //   z-index: 0;
 
-    height: 15rem;
-    width: 33rem;
-    position: absolute;
-    top: 30%;
-    //left: .2rem;
-    right: 10rem;
-    text-align: center;
+  //   height: 15rem;
+  //   width: 33rem;
+  //   position: absolute;
+  //   top: 30%;
+  //   //left: .2rem;
+  //   right: 10rem;
+  //   text-align: center;
 
-    @media screen and (max-width: $bp-small) {
-      display: none;
-    }
+  //   @media screen and (max-width: $bp-small) {
+  //     display: none;
+  //   }
 
-  }
+  // }
 
-  &__square-2 {
-    border: .2rem solid $color-grey-light-2;
-    border-radius: 2rem;
-    z-index: 0;
+  // &__square-2 {
+  //   border: .2rem solid $color-grey-light-2;
+  //   border-radius: 2rem;
+  //   z-index: 0;
 
-    height: 15rem;
-    width: 33rem;
-    position: absolute;
-    top: 50%;
-    //left: .2rem;
-    right: 10rem;
-    text-align: center;
+  //   height: 15rem;
+  //   width: 33rem;
+  //   position: absolute;
+  //   top: 50%;
+  //   //left: .2rem;
+  //   right: 10rem;
+  //   text-align: center;
 
-    @media screen and (max-width: $bp-small) {
-      display: none;
-    }
+  //   @media screen and (max-width: $bp-small) {
+  //     display: none;
+  //   }
 
-  }
+  // }
 
   &__description {
-    // margin-right: auto;
-    //transform: rotate(-90deg);
-    height: 10rem;
-    width: 40rem;
-    position: absolute;
-    top: 34%;
-    //left: .2rem;
-    right: 7rem;
-    text-align: center;
-    z-index: 10;
+    // // margin-right: auto;
+    // //transform: rotate(-90deg);
+    // height: 10rem;
+    // width: 40rem;
+    // position: absolute;
+    // //top: 34%;
+    // top: 75%;
+    // left: 9rem;
+    // //right: 7rem;
+    // text-align: center;
+    // z-index: 10;
+    // flex: 50%;
+
+    grid-column: 1;
+    //min-height: 100px;
+
 
     @media screen and (max-width: $bp-small) {
       display: none;
@@ -110,19 +147,20 @@
   }
 
   &__phone {
-    //margin-left: auto;
-    //transform: rotate(90deg);
-    height: 10rem;
-    width: 40rem;
-    position: absolute;
-    top: 55%;
-    right: 7rem;
-    text-align: center;
-    z-index: 10;
+    // //margin-left: auto;
+    // //transform: rotate(90deg);
+    // height: 10rem;
+    // width: 40rem;
+    // position: absolute;
+    // //top: 55%;
+    // //right: 7rem;
+    // top: 75%;
+    // right: 10rem;
+    // text-align: center;
+    // z-index: 10;
+    // flex: 50%;
 
-    @media screen and (max-width: $bp-small) {
-      display: none;
-    }
+    grid-column-start: -1;
 
     @media screen and (max-width: $bp-small) {
       display: none;
@@ -155,13 +193,12 @@
       display: none;
     }
 
-    @media screen and (max-width: $bp-small) {
+    @media screen and (max-width: $bp-medium) {
       visibility: visible;
       padding: 0 1rem 1rem 1rem;
       font-family: 'Open Sans Condensed', sans-serif;
 
     }
-    
 
     &--description {
       justify-self: center;

@@ -26,8 +26,6 @@
   background-color: $color-primary;
   grid-column: main;
   grid-column-start: 2;
-  
-
 
   @supports(display: grid) {
     display: grid;
