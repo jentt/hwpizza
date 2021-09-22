@@ -10,7 +10,6 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #FEF2E7;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -19,8 +18,8 @@ html {
 }
 
 body {
-  font-family: "Fira Sans Condensed", sans-serif;
-  color: #6D5D4B;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FEF2E7, #fde5cf);
   font-weight: 300;
   line-height: 1.6;
 }
@@ -60,30 +59,32 @@ body {
   }
 }
 .heading-5, .heading-4, .heading-2, .heading-1 {
-  font-family: "Roboto Slab", serif;
   font-weight: 400;
 }
 
 .heading-1 {
   font-size: 4.5rem;
-  color: #fcc898;
+  color: #fcb6b8;
   line-height: 1;
   letter-spacing: 0.6rem;
   text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 
 .heading-2 {
   font-size: 2.8rem;
-  color: #fcc898;
+  color: #e1b58e;
   line-height: 1;
   letter-spacing: 0.6rem;
   text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 
 .heading-4 {
   font-size: 1.9rem;
   line-height: 1.6;
   text-transform: uppercase;
+  font-family: "Chivo", sans-serif;
 }
 .heading-4--light {
   color: #f9f7f6;
@@ -93,8 +94,9 @@ body {
 }
 
 .heading-5 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
+  font-family: "Chivo", sans-serif;
 }
 .heading-5--light {
   color: #f9f7f6;
@@ -105,7 +107,7 @@ body {
 
 #scrollToTopBtn {
   display: inline-block;
-  background-color: #fcc898;
+  background-color: #e1b58e;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -131,7 +133,7 @@ body {
 
 #scrollToTopBtn:hover {
   cursor: pointer;
-  background-color: #FFD8D8;
+  background-color: #c8a17e;
 }
 
 #scrollToTopBtn:active {
@@ -143,9 +145,6 @@ body {
   visibility: visible;
 }
 
-/*
-header should be frontpg so move everything inside it
-*/
 .heading-primary {
   font-family: "Righteous", cursive;
   font-size: 10.2rem;
@@ -159,7 +158,7 @@ header should be frontpg so move everything inside it
 .heading-primary--middle {
   display: block;
   text-align: left;
-  color: #fcc898;
+  color: #e1b58e;
 }
 .heading-primary--sub {
   display: block;
@@ -223,7 +222,7 @@ header should be frontpg so move everything inside it
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: #fcc38e;
+  background: #fcd2ac;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -245,6 +244,7 @@ header should be frontpg so move everything inside it
   display: inline-block;
   position: relative;
   font-size: 3.1rem;
+  font-family: "Roboto Slab", serif;
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 300;
@@ -274,7 +274,6 @@ header should be frontpg so move everything inside it
 
 .deals {
   padding: 5rem;
-  background-color: #FEF2E7;
   display: grid;
   grid-row-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
@@ -286,6 +285,9 @@ header should be frontpg so move everything inside it
   grid-column: header;
   padding-top: 5rem;
 }
+.deals__name {
+  padding-bottom: 1rem;
+}
 
 .underline {
   border-top: 3px double #8c8b8b;
@@ -293,7 +295,6 @@ header should be frontpg so move everything inside it
 
 .combos {
   padding: 5rem;
-  background-color: #FEF2E7;
   grid-column: main;
   grid-column-start: 2;
 }
@@ -303,6 +304,11 @@ header should be frontpg so move everything inside it
     grid-auto-rows: 1fr;
     grid-gap: 3rem;
     align-items: start;
+  }
+}
+@media screen and (max-width: 51.25em) {
+  .combos {
+    grid-column-start: 1;
   }
 }
 
@@ -327,14 +333,10 @@ header should be frontpg so move everything inside it
   list-style-type: circle;
 }
 .combo__price {
-  font-size: 2.2rem;
   grid-column-start: 2;
-  align-content: flex-end;
-  color: #FCC2C3;
 }
 
 .menus {
-  background-color: #FEF2E7;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, min-content);
@@ -353,11 +355,9 @@ header should be frontpg so move everything inside it
   display: grid;
 }
 .menu__name {
-  font-family: "Rubik", sans-serif;
   font-weight: bold;
 }
 .menu__items {
-  font-family: "Chivo", sans-serif;
   text-transform: capitalize;
   font-size: 2rem;
 }
@@ -365,8 +365,8 @@ header should be frontpg so move everything inside it
   display: grid;
 }
 .menu__title {
-  text-transform: uppercase;
   font-size: 3rem;
+  padding-bottom: 1rem;
 }
 .menu__info {
   font-size: 1.5rem;
@@ -382,7 +382,6 @@ header should be frontpg so move everything inside it
   display: grid;
 }
 .pizza__items {
-  font-family: "Chivo", sans-serif;
   text-transform: capitalize;
   font-size: 2rem;
   display: grid;
@@ -418,11 +417,10 @@ header should be frontpg so move everything inside it
 }
 
 .main {
-  font-family: "Staatliches", cursive;
+  font-family: "Roboto Slab", serif;
   font-size: 2.2rem;
   opacity: 0.7;
   letter-spacing: 0.2rem;
-  background-color: #FEF2E7;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: auto 1fr auto;
@@ -454,14 +452,14 @@ header should be frontpg so move everything inside it
   grid-row: -1;
   grid-column: 1/-1;
   min-height: 50px;
-  padding: 3.4rem;
+  padding: 0 10rem 3.4rem 10rem;
 }
 .main__name {
   text-align: left;
   font-weight: bold;
   font-size: 4.1rem;
   text-transform: uppercase;
-  color: #fcc898;
+  color: #c8a17e;
 }
 .main__name:hover {
   font-size: 4.2rem;
@@ -485,10 +483,10 @@ header should be frontpg so move everything inside it
 }
 .main__mobile {
   display: grid;
-  grid-template-columns: repeat(2, 230px);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 4rem;
-  padding: 2rem;
-  background-color: #FEF2E7;
+  font-family: "Roboto Slab", serif;
+  background-color: #fde5cf;
 }
 @media screen and (min-width: 37.5em) {
   .main__mobile {
@@ -499,15 +497,13 @@ header should be frontpg so move everything inside it
   .main__mobile {
     visibility: visible;
     padding: 0 1rem 1rem 1rem;
-    font-family: "Open Sans Condensed", sans-serif;
   }
 }
 .main__mobile--description {
-  justify-self: center;
   grid-column: 1/2;
 }
 .main__mobile--phone {
-  justify-self: center;
+  justify-self: right;
   grid-column: 2/-1;
 }
 
@@ -543,7 +539,7 @@ ion-icon {
 }
 
 .pizza-icon:nth-child(2) {
-  color: #fcc898;
+  color: #e1b58e;
   animation-delay: 0.75s;
 }
 

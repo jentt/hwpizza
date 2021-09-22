@@ -1,13 +1,8 @@
 .main {
-  // background-color: $color-primary;
-  // padding: 0 1rem 1rem 1rem;
-  // display: flex;
-  // justify-content: space-between;  
-  font-family: 'Staatliches', cursive;
+  font-family: $font-display;
   font-size: 2.2rem;
   opacity: .7;
   letter-spacing: .2rem;
-  background-color: $color-primary;
 
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -36,8 +31,6 @@
     position: absolute;
     left: 10rem;
     top: 30%;
-    //grid-template-columns: repeat(2, auto);
-    //grid-template-rows: repeat(2, auto);
 
   }
 
@@ -47,8 +40,7 @@
     grid-row: -1;
     grid-column: 1 / -1;
     min-height: 50px;
-    padding: 3.4rem;
-    //grid-template-rows: auto 1fr auto;
+    padding: 0 10rem 3.4rem 10rem;
 
   }
 
@@ -57,7 +49,7 @@
     font-weight: bold;
     font-size: 4.1rem;
     text-transform: uppercase;
-    color: $color-secondary;
+    color: $color-secondary-dark;
 
     &:hover {
       font-size: 4.2rem;
@@ -66,128 +58,31 @@
 
   }
 
-  // &__square-1 {
-  //   //width: 32rem;
-  //   //height: 2rem;
-  //   //background-color: transparent;
-  //   //outline: solid $color-grey-light-2;
-  //   border: .2rem solid $color-grey-light-2;
-  //   border-radius: 2rem;
-  //   z-index: 0;
-
-  //   height: 15rem;
-  //   width: 33rem;
-  //   position: absolute;
-  //   top: 30%;
-  //   //left: .2rem;
-  //   right: 10rem;
-  //   text-align: center;
-
-  //   @media screen and (max-width: $bp-small) {
-  //     display: none;
-  //   }
-
-  // }
-
-  // &__square-2 {
-  //   border: .2rem solid $color-grey-light-2;
-  //   border-radius: 2rem;
-  //   z-index: 0;
-
-  //   height: 15rem;
-  //   width: 33rem;
-  //   position: absolute;
-  //   top: 50%;
-  //   //left: .2rem;
-  //   right: 10rem;
-  //   text-align: center;
-
-  //   @media screen and (max-width: $bp-small) {
-  //     display: none;
-  //   }
-
-  // }
-
   &__description {
-    // // margin-right: auto;
-    // //transform: rotate(-90deg);
-    // height: 10rem;
-    // width: 40rem;
-    // position: absolute;
-    // //top: 34%;
-    // top: 75%;
-    // left: 9rem;
-    // //right: 7rem;
-    // text-align: center;
-    // z-index: 10;
-    // flex: 50%;
-
     grid-column: 1;
-    //min-height: 100px;
-
 
     @media screen and (max-width: $bp-small) {
       display: none;
     }
 
-    // &--mobile {
-    //   background-color: #fff;
-
-    //   @media screen and (min-width: $bp-small) {
-    //     visibility: hidden;
-    //     font-size: 2rem;
-    //   }
-
-    //   @media screen and (max-width: $bp-small) {
-    //     visibility: visible;
-    //     padding: 0 1rem 1rem 1rem;
-    //   }
-
-    // }
   }
 
   &__phone {
-    // //margin-left: auto;
-    // //transform: rotate(90deg);
-    // height: 10rem;
-    // width: 40rem;
-    // position: absolute;
-    // //top: 55%;
-    // //right: 7rem;
-    // top: 75%;
-    // right: 10rem;
-    // text-align: center;
-    // z-index: 10;
-    // flex: 50%;
-
     grid-column-start: -1;
 
     @media screen and (max-width: $bp-small) {
       display: none;
     }
 
-    // &--mobile {
-    //   background-color: #fff;
-
-    //   @media screen and (min-width: $bp-small) {
-    //     visibility: hidden;
-    //   }
-
-    //   @media screen and (max-width: $bp-small) {
-    //     visibility: visible;
-    //     padding: 0 1rem 1rem 1rem;
-    //   }
-    // }
-
   }
 
   &__mobile {
     display: grid;
-    grid-template-columns: repeat(2, 230px);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
 
-    padding: 2rem;
-    background-color: $color-primary;
+    font-family: $font-display;
+    background-color: $color-primary-light;
 
     @media screen and (min-width: $bp-small) {
       display: none;
@@ -196,17 +91,14 @@
     @media screen and (max-width: $bp-medium) {
       visibility: visible;
       padding: 0 1rem 1rem 1rem;
-      font-family: 'Open Sans Condensed', sans-serif;
-
     }
 
     &--description {
-      justify-self: center;
       grid-column: 1 / 2;
     }
 
     &--phone {
-      justify-self: center;
+      justify-self: right;
       grid-column: 2 / -1;
     }
   }

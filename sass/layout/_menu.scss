@@ -1,5 +1,4 @@
 .menus {
-  background-color: $color-primary;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, min-content);
@@ -17,16 +16,12 @@
 
 .menu {
   display: grid;
-  //grid-auto-rows: auto;
-  //grid-template-rows: repeat(2, auto);
 
   &__name {
-    font-family: 'Rubik', sans-serif;
     font-weight: bold;
   }
 
   &__items {
-    font-family: 'Chivo', sans-serif;
     text-transform: capitalize;
     font-size: 2rem;
    
@@ -37,8 +32,8 @@
   }
 
   &__title {
-    text-transform: uppercase;
     font-size: 3rem;
+    padding-bottom: 1rem;
   }
 
   &__info {
@@ -59,7 +54,7 @@
   display: grid;
 
   &__items {
-    font-family: 'Chivo', sans-serif;
+    //font-family: 'Chivo', sans-serif;
     text-transform: capitalize;
     font-size: 2rem;
 

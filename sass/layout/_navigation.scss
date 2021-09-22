@@ -13,6 +13,7 @@
     margin: 0 0 5px 0;
     background: $color-grey-dark;
     @include easeOut;
+
   }
 
   //Rotate into X with menu lines
@@ -64,7 +65,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background: darken($color: $color-secondary, $amount: 2);
+    background: darken($color: $color-primary-dark, $amount: 2);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -93,6 +94,7 @@
     display: inline-block;
     position: relative;
     font-size: 3.1rem;
+    font-family: $font-display;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
