@@ -54,13 +54,10 @@
   display: grid;
 
   &__items {
-    //font-family: 'Chivo', sans-serif;
-    text-transform: capitalize;
-    font-size: 2rem;
-
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
+    grid-gap: 1rem;
   }
 
   &__size__M {

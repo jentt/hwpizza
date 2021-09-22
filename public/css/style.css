@@ -382,11 +382,10 @@ body {
   display: grid;
 }
 .pizza__items {
-  text-transform: capitalize;
-  font-size: 2rem;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
+  grid-gap: 1rem;
 }
 .pizza__size__M {
   grid-column-start: 2;
