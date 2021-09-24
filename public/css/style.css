@@ -58,7 +58,7 @@ body {
     transform: scale(1);
   }
 }
-.heading-5, .heading-4, .heading-2, .heading-1 {
+.heading-5, .heading-4, .heading-3, .heading-2, .heading-1 {
   font-weight: 400;
 }
 
@@ -78,6 +78,15 @@ body {
   letter-spacing: 0.6rem;
   text-transform: uppercase;
   font-family: "Roboto Slab", serif;
+}
+
+.heading-3 {
+  font-size: 3.7rem;
+  color: #fcb6b8;
+  line-height: 1;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  font-family: "Chivo", sans-serif;
 }
 
 .heading-4 {
@@ -175,6 +184,7 @@ body {
 }
 .about__hours--title {
   text-align: center;
+  padding-bottom: 1.7rem;
 }
 .about__hours td, .about__hours th {
   padding: 0.7rem;

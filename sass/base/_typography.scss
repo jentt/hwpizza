@@ -22,6 +22,16 @@
   font-family: $font-display;
 }
 
+.heading-3 {
+  @extend %heading;
+  font-size: 3.7rem;
+  color: $color-tertiary;
+  line-height: 1;
+  letter-spacing: .6rem;
+  text-transform: uppercase;
+  font-family: $font-description;
+}
+
 .heading-4 {
   @extend %heading;
   font-size: 1.9rem;
