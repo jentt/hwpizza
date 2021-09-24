@@ -1,0 +1,65 @@
+.about {
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 6rem;
+
+    a {
+      color: $color-secondary-dark;
+      text-decoration: none; 
+      background-color: none;
+      transition: all .1s;
+    }
+  
+    a:hover {
+      font-size: 2rem;
+      color: $color-grey;
+    }
+  }
+
+  &__hours {
+    grid-column: 1 / -1;
+
+    &--title {
+      text-align: center;
+
+    }
+
+    td, th {
+      padding: .7rem;
+    }
+  }
+
+  &__location {
+
+  }
+
+  &__contact {
+    text-align: right;
+    
+  }
+
+  &__icons {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    .bi {
+      color: $color-pink;
+      font-size: 4.3rem;
+    }
+
+  }
+
+  
+
+}

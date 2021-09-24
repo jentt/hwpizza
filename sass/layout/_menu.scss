@@ -37,7 +37,7 @@
   }
 
   &__info {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   &__list__item {
@@ -83,15 +83,24 @@
     font-size: 2.5rem;
   }
 
-  &__info {
-    font-size: 1.5rem;
-  }
-
   &__list__item {
     list-style: none;
   }
 
   &__price__M {
-    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: repeat(10, auto);
   }
+
+  &__price__L {
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+  }
+
+  &__price__XL {
+    display: grid;
+    grid-template-rows: repeat(10, auto);
+  }
+
+
 }
