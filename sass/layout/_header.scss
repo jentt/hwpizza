@@ -20,6 +20,10 @@
     display: block;
     text-align: left;
   }
+
+  @media screen and (max-width: $bp-small) {
+    font-size: 7.5rem;
+  }
 }
 
 .heading {

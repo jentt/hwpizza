@@ -227,6 +227,11 @@ body {
   display: block;
   text-align: left;
 }
+@media screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 7.5rem;
+  }
+}
 
 .heading {
   grid-column: 1/-1;
