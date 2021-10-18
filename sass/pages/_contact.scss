@@ -5,9 +5,9 @@
   letter-spacing: .2rem;
 
   display: grid;
-  grid-template-rows: 100px 1fr auto;
+  grid-template-rows: 120px 1fr auto;
   grid-template-columns: repeat(2, auto);
-  grid-row-gap: 3.4rem;
+  grid-row-gap: 3.6rem;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -33,7 +33,12 @@
     // position: absolute;
     // left: 10rem;
     // top: 30%;
-    justify-self: center;
+    //justify-self: center;
+    padding: 0 2rem 0 6rem;
+
+    @media screen and (max-width: $bp-small) {
+      padding: 3.4rem 4rem 0;
+    }
   }
 
   &__contact {
@@ -42,7 +47,11 @@
     grid-row: -1;
     grid-column: 1 / -1;
     min-height: 50px;
-    padding: 0 10rem 3.4rem 10rem;
+    padding: 0 6rem 3.4rem;
+
+    @media screen and (max-width: $bp-small) {
+      padding: 0 4rem 3.4rem;
+    }
 
   }
 

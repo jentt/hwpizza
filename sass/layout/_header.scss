@@ -1,6 +1,6 @@
 .heading-primary {
   font-family: $font-primary;
-  font-size: 10.2rem;
+  font-size: 12.4rem;
   color: $color-black;
   z-index: 0;
 
@@ -22,7 +22,7 @@
   }
 
   @media screen and (max-width: $bp-small) {
-    font-size: 7.5rem;
+    font-size: 6.3rem;
   }
 }
 
