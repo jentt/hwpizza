@@ -495,7 +495,9 @@ body {
   opacity: 0.7;
   letter-spacing: 0.2rem;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 100px 1fr auto;
+  grid-template-columns: repeat(2, auto);
+  grid-row-gap: 3.4rem;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -513,10 +515,8 @@ body {
 }
 .main__header {
   display: grid;
-  grid-column: 1/-1;
-  position: absolute;
-  left: 10rem;
-  top: 30%;
+  grid-row: 2;
+  justify-self: center;
 }
 .main__contact {
   display: grid;
