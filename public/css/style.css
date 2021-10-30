@@ -204,8 +204,8 @@ body {
 .copyright {
   font-size: 1.4rem;
   color: #5D5858;
-  margin-left: 6%;
-  width: 70%;
+  margin-left: 10%;
+  width: 90%;
 }
 
 .heading-primary {
@@ -377,6 +377,7 @@ body {
 @media screen and (max-width: 51.25em) {
   .combos {
     grid-column-start: 1;
+    padding: 2rem;
   }
 }
 
@@ -416,6 +417,7 @@ body {
   .menus {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    padding: 8rem 2rem 2rem;
   }
 }
 
@@ -452,7 +454,6 @@ body {
 .pizza__items {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, auto);
   grid-gap: 1rem;
 }
 .pizza__size__M {
@@ -479,14 +480,20 @@ body {
 .pizza__price__M {
   display: grid;
   grid-template-rows: repeat(10, auto);
+  align-items: center;
 }
 .pizza__price__L {
   display: grid;
   grid-template-rows: repeat(10, auto);
+  align-items: center;
 }
 .pizza__price__XL {
   display: grid;
   grid-template-rows: repeat(10, auto);
+  align-items: center;
+}
+.pizza__price {
+  text-align: center;
 }
 
 .main {

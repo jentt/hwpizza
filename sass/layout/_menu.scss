@@ -10,6 +10,7 @@
   @media screen and (max-width: $bp-medium) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    padding: 8rem 2rem 2rem;
   }
 
 }
@@ -56,7 +57,7 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto);
+    //grid-template-rows: auto;
     grid-gap: 1rem;
   }
 
@@ -90,16 +91,19 @@
   &__price__M {
     display: grid;
     grid-template-rows: repeat(10, auto);
+    align-items: center;
   }
 
   &__price__L {
     display: grid;
     grid-template-rows: repeat(10, auto);
+    align-items: center;
   }
 
   &__price__XL {
     display: grid;
     grid-template-rows: repeat(10, auto);
+    align-items: center;
   }
 
 
